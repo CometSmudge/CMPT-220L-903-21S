@@ -29,11 +29,39 @@ public class Main {
 
     public static void main(String[] args) {
         //	Replace this with your dry inventory function!
-        wet_inventory();
+        dry_inventory();
     }
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
+        customers(4,1,4);
+        customers(2,3,0);
+        customers(3,0,0);
+        customers(1,2,0);
+        customers(0,6,10);
+        customers(0,4,5);
+        customers(2,0,0);
+        customers(10,8,10);
+        customers(6,0,0);
+        customers(0,1,0);
+        customers(1,0,0);
+        customers(0,7,4);
+        customers(2,0,0);
+        customers(6,3,0);
+        customers(9,2,3);
+
+        System.out.println("Results for the hour!");
+        System.out.println("Lemonades Inventory: " + lemonades_available);
+        System.out.println("Pretzels Inventory: " + pretzels_available);
+        System.out.println("Cash: " + cash);
+        System.out.println("Tips: " + tips);
+
+    }
+    static void customers(int pretzels_bought, int lemonades_bought, double tip_left) {
+        lemonades_available -= lemonades_bought;
+        pretzels_available -= pretzels_bought;
+        cash += (2 * pretzels_bought) + (8 * lemonades_bought);
+        tips += tip_left;
     }
 
     static void wet_inventory() {
