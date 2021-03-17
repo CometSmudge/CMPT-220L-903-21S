@@ -11,7 +11,7 @@ public class Main {
      *
      * We're responsible for keeping track of the number of pretzels and lemonades sold as well as the cash on hand and
      * in the tip jar! To keep things easy I won't make you make change! At the end of the day tips are split among the
-     * employees! That means DON'T add it to the cash at the end of the day or during a transaction
+     * employees! That means DON'T add it to the cash at the end of the day or during a transaction.
      *
      * At the end we're going to print out our inventory left and how much we made in case for the day! Print out the
      * tips too!
