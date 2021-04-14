@@ -3,6 +3,8 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	Plant rose = new Plant(true, "flower", "rose");
+	rose.WateringInstructions();
+	rose.sunlightRequirements();
     }
 }
