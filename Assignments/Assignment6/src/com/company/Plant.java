@@ -6,7 +6,7 @@ public class Plant {
     String name;
 
     public Plant(boolean needsWatering, String plantFamily, String name) {
-        System.out.println("placeholder");
+
     }
 
 
