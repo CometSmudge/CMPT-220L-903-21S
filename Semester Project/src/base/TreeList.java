@@ -6,18 +6,21 @@ import java.util.Collections;
 public class TreeList {
     ArrayList<Node> list = new ArrayList<>();
     Node root;
-
+    ArrayList<Integer> intlist = new ArrayList<>();
     public TreeList() {
         this.root = null;
     }
 
     public void add(int value) {
+
+        intlist.add(value);
         if (this.root == null) {
             this.root = new Node(value);
 
         } else {
             Node tempNode = this.root;
-            if (value <= tempNode) {
+
+            if (value <= tempNode.value) {
                 while (tempNode.leftNode != null) {
                     tempNode = tempNode.leftNode;
                 }
@@ -28,17 +31,29 @@ public class TreeList {
                     tempNode = tempNode.rightNode;
                 }
                 tempNode.rightNode = new Node(value);
-            }
+
             }
         }
     }
 
 
+    public void search(int find) {
+        boolean inTree = false;
+        for (int x : intlist) {
+            if (x == find) {
+                inTree = true;
+            }
+        }
+        if (inTree == true){
+            System.out.println("The value is in the tree");
 
 
-    Node tempNode = this.root;
-            while (tempNode.nextNode != null) {
-        tempNode = tempNode.nextNode;
+        } else {
+            System.out.println("The value is not in the tree");
+        }
+
+
     }
-    tempNode.nextNode = new Node(value);
-            System.out.println("The value " + value + " has been added successfully.");
+}
+
+
