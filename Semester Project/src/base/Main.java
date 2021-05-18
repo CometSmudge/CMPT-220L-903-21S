@@ -9,6 +9,11 @@ public class Main {
     list.add(5);
     list.add(2);
     list.add(7);
-    list.search(9);
+    list.add(9);
+    list.add(12);
+
+
+
+    list.Height();
     }
 }

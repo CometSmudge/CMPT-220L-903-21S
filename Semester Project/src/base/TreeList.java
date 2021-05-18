@@ -7,6 +7,10 @@ public class TreeList {
     ArrayList<Node> list = new ArrayList<>();
     Node root;
     ArrayList<Integer> intlist = new ArrayList<>();
+
+    int height = 0;
+    int tempHeight = 0;
+
     public TreeList() {
         this.root = null;
     }
@@ -17,23 +21,34 @@ public class TreeList {
         if (this.root == null) {
             this.root = new Node(value);
 
+
         } else {
             Node tempNode = this.root;
 
             if (value <= tempNode.value) {
                 while (tempNode.leftNode != null) {
                     tempNode = tempNode.leftNode;
+
                 }
                 tempNode.leftNode = new Node(value);
-
+                tempHeight++;
+                if (tempHeight > height) {
+                    height = tempHeight;
+                }
             } else {
                 while (tempNode.rightNode != null) {
                     tempNode = tempNode.rightNode;
+
                 }
                 tempNode.rightNode = new Node(value);
-
+                tempHeight++;
+                if (tempHeight > height) {
+                    height = tempHeight;
+                }
             }
         }
+
+
     }
 
 
@@ -53,6 +68,9 @@ public class TreeList {
         }
 
 
+    }
+    public void Height() {
+        System.out.println("The height is " + height);
     }
 }
 
