@@ -72,6 +72,57 @@ public class TreeList {
     public void Height() {
         System.out.println("The height is " + height);
     }
+    public void Smallest() {
+        int a = 0;
+        int b = 0;
+
+        for (int z = 0; z < (intlist.size() - 1); z++) {
+            for (int x = 0; x < (intlist.size() - 1); x++) {
+                if (intlist.get(x) > intlist.get(x + 1)) {
+                    a = intlist.get(x);
+                    b = intlist.get(x + 1);
+                    intlist.set(x, b);
+                    intlist.set(x + 1, a);
+                }
+            }
+        }
+
+        System.out.println(intlist.get(0));
+    }
+    public void Largest() {
+        int a = 0;
+        int b = 0;
+
+        for (int z = 0; z < (intlist.size() - 1); z++) {
+            for (int x = 0; x < (intlist.size() - 1); x++) {
+                if (intlist.get(x) > intlist.get(x + 1)) {
+                    a = intlist.get(x);
+                    b = intlist.get(x + 1);
+                    intlist.set(x, b);
+                    intlist.set(x + 1, a);
+                }
+            }
+        }
+
+        System.out.println(intlist.get(intlist.size() - 1));
+    }
+    public void nthLargest(int nth) {
+        int a = 0;
+        int b = 0;
+
+        for (int z = 0; z < (intlist.size() - 1); z++) {
+            for (int x = 0; x < (intlist.size() - 1); x++) {
+                if (intlist.get(x) > intlist.get(x + 1)) {
+                    a = intlist.get(x);
+                    b = intlist.get(x + 1);
+                    intlist.set(x, b);
+                    intlist.set(x + 1, a);
+                }
+            }
+        }
+
+        System.out.println(intlist.get(intlist.size() - nth));
+    }
 }
 
 

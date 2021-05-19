@@ -11,9 +11,9 @@ public class Main {
     list.add(7);
     list.add(9);
     list.add(12);
-
-
-
-    list.Height();
+    //list.Smallest();
+   // list.Largest();
+    list.nthLargest(5);
+    //list.Height();
     }
 }
