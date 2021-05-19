@@ -1,10 +1,9 @@
 package base;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class TreeList {
-    ArrayList<Node> list = new ArrayList<>();
+    ArrayList<Integer> list = new ArrayList<Integer>();
     Node root;
     ArrayList<Integer> intlist = new ArrayList<>();
 
@@ -122,6 +121,24 @@ public class TreeList {
         }
 
         System.out.println(intlist.get(intlist.size() - nth));
+    }
+
+
+
+    public void delete(int value) {
+        list.clear();
+        for (int j = 0; j < intlist.size(); j++) {
+            if (intlist.get(j) == value) {
+                intlist.remove(j);
+                break;
+            }
+        }
+        int tempInt = 0;
+        for (int i = 0; i < intlist.size(); i++) {
+            tempInt = intlist.get(i);
+            list.add(tempInt);
+        }
+
     }
 }
 
