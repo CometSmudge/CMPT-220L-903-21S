@@ -140,6 +140,50 @@ public class TreeList {
         }
 
     }
+
+    public void inOrder2(Node firstNode) {
+             if (firstNode == null) {
+                 return;
+             }
+             inOrder2(firstNode.leftNode);
+             System.out.print(firstNode.value + " ");
+             inOrder2(firstNode.rightNode);
+
+
+    }
+
+    public void inOrder(){
+        inOrder2(this.root);
+    }
+
+    public void preOrder2(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+
+        System.out.print(firstNode.value + " ");
+        preOrder2(firstNode.leftNode);
+        preOrder2(firstNode.rightNode);
+    }
+    public void preOrder() {
+        preOrder2(this.root);
+    }
+
+    public void postOrder2(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+
+        postOrder2(firstNode.leftNode);
+        postOrder2(firstNode.rightNode);
+        System.out.print(firstNode.value + " ");
+    }
+    public void postOrder(){
+        postOrder2(this.root);
+    }
+
+
+
 }
 
 

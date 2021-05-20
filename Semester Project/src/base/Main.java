@@ -16,9 +16,10 @@ public class Main {
     //list.Largest();
     //list.nthLargest(3);
     //list.Height();
-    list.search(2);
-    list.delete(2);
-    list.search(2);
+    //list.search(2);
+    //list.delete(2);
+    //list.search(2);
+    list.postOrder();
 
     }
 }
