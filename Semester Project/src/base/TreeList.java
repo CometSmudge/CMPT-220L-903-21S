@@ -7,8 +7,7 @@ public class TreeList {
     Node root;
     ArrayList<Integer> intlist = new ArrayList<>();
 
-    int height = 0;
-    int tempHeight = 0;
+
 
     public TreeList() {
         this.root = null;
@@ -30,20 +29,14 @@ public class TreeList {
 
                 }
                 tempNode.leftNode = new Node(value);
-                tempHeight++;
-                if (tempHeight > height) {
-                    height = tempHeight;
-                }
+
             } else {
                 while (tempNode.rightNode != null) {
                     tempNode = tempNode.rightNode;
 
                 }
                 tempNode.rightNode = new Node(value);
-                tempHeight++;
-                if (tempHeight > height) {
-                    height = tempHeight;
-                }
+
             }
         }
 
@@ -68,9 +61,7 @@ public class TreeList {
 
 
     }
-    public void Height() {
-        System.out.println("The height is " + height);
-    }
+
     public void Smallest() {
         int a = 0;
         int b = 0;
@@ -181,6 +172,43 @@ public class TreeList {
     public void postOrder(){
         postOrder2(this.root);
     }
+
+    int leftHeight = 0;
+    int rightHeight = 0;
+    int height = 0;
+
+    public void leftHeight(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+        leftHeight(firstNode.leftNode);
+
+
+        leftHeight++;
+
+    }
+    public void rightHeight(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+        rightHeight(firstNode.rightNode);
+
+
+        rightHeight++;
+
+    }
+    public void height() {
+        leftHeight(this.root);
+        rightHeight(this.root);
+        if (leftHeight > rightHeight) {
+            System.out.println("The height is " + leftHeight);
+        } else {
+            System.out.println("The height is " + rightHeight);
+        }
+    }
+
+
+
 
 
 
