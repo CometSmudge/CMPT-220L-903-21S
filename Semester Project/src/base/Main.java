@@ -15,11 +15,11 @@ public class Main {
     //list.Smallest();
     //list.Largest();
     //list.nthLargest(3);
-    list.height();
+    //list.height();
     //list.search(2);
     //list.delete(2);
     //list.search(2);
-    //list.postOrder();
+    list.inOrder();
 
     }
 }

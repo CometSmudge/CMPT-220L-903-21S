@@ -205,8 +205,29 @@ public class TreeList {
         } else {
             System.out.println("The height is " + rightHeight);
         }
+
+
     }
 
+    public void depthFirst2(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+
+        System.out.print(firstNode.value + " ");
+        preOrder2(firstNode.leftNode);
+        preOrder2(firstNode.rightNode);
+    }
+    public void depthFirst() {
+        depthFirst2(this.root);
+    }
+
+    public void breadthFirst(Node firstNode) {
+        if (firstNode == null) {
+            return;
+        }
+        
+    }
 
 
 
