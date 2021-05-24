@@ -19,7 +19,7 @@ public class Main {
     //list.search(2);
     //list.delete(2);
     //list.search(2);
-    list.inOrder();
+    list.breadthFirst();
 
     }
 }

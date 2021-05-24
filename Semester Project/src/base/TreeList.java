@@ -202,8 +202,23 @@ public class TreeList {
         rightHeight(this.root);
         if (leftHeight > rightHeight) {
             System.out.println("The height is " + leftHeight);
+
         } else {
             System.out.println("The height is " + rightHeight);
+
+        }
+
+
+    }
+    public int heightreturn() {
+        leftHeight(this.root);
+        rightHeight(this.root);
+        if (leftHeight > rightHeight) {
+
+            return leftHeight;
+        } else {
+
+            return rightHeight;
         }
 
 
@@ -222,11 +237,22 @@ public class TreeList {
         depthFirst2(this.root);
     }
 
-    public void breadthFirst(Node firstNode) {
-        if (firstNode == null) {
-            return;
+    public void breadthFirst() {
+        int h = heightreturn();
+        System.out.print(this.root.value + " ");
+        Node tempNode = this.root;
+        Node tempNode2 = this.root;
+
+        for (int i = 0; i <= h; i++) {
+            if (tempNode.leftNode != null) {
+                System.out.print(tempNode.leftNode.value + " ");
+                tempNode = tempNode.leftNode;
+            }
+            if (tempNode2.rightNode != null) {
+                System.out.print(tempNode2.rightNode.value + " ");
+                tempNode2 = tempNode2.rightNode;
+            }
         }
-        
     }
 
 
