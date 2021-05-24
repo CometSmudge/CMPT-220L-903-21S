@@ -3,8 +3,10 @@ package base;
 import java.util.ArrayList;
 
 public class TreeList {
+    // The arraylist for the nodes
     ArrayList<Integer> list = new ArrayList<Integer>();
     Node root;
+    // A list of the values as integers to make some of the functions easier.
     ArrayList<Integer> intlist = new ArrayList<>();
 
 
@@ -12,7 +14,7 @@ public class TreeList {
     public TreeList() {
         this.root = null;
     }
-
+    // adds a value to the tree
     public void add(int value) {
 
         intlist.add(value);
@@ -43,7 +45,7 @@ public class TreeList {
 
     }
 
-
+    // searches the tree for a value and prints if it is in the tree or not.
     public void search(int find) {
         boolean inTree = false;
         for (int x : intlist) {
@@ -61,7 +63,7 @@ public class TreeList {
 
 
     }
-
+    // finds the smallest value in the tree
     public void Smallest() {
         int a = 0;
         int b = 0;
@@ -79,6 +81,7 @@ public class TreeList {
 
         System.out.println(intlist.get(0));
     }
+    // finds the largest value in the tree
     public void Largest() {
         int a = 0;
         int b = 0;
@@ -96,6 +99,7 @@ public class TreeList {
 
         System.out.println(intlist.get(intlist.size() - 1));
     }
+    // finds the nth largest value in the tree
     public void nthLargest(int nth) {
         int a = 0;
         int b = 0;
@@ -115,7 +119,8 @@ public class TreeList {
     }
 
 
-
+    // deletes a value from the tree. It removes everything from the tree and just
+    // the deleted value from the list, then it adds everything in the list back to the tree.
     public void delete(int value) {
         list.clear();
         for (int j = 0; j < intlist.size(); j++) {
@@ -131,7 +136,7 @@ public class TreeList {
         }
 
     }
-
+    // prints the values of the tree in order
     public void inOrder2(Node firstNode) {
              if (firstNode == null) {
                  return;
@@ -142,7 +147,7 @@ public class TreeList {
 
 
     }
-
+    // This is so this.root doesn't have to be typed every time the function is done.
     public void inOrder(){
         inOrder2(this.root);
     }
@@ -156,6 +161,7 @@ public class TreeList {
         preOrder2(firstNode.leftNode);
         preOrder2(firstNode.rightNode);
     }
+    // This prints the list in pre order
     public void preOrder() {
         preOrder2(this.root);
     }
@@ -176,7 +182,8 @@ public class TreeList {
     int leftHeight = 0;
     int rightHeight = 0;
     int height = 0;
-
+    // leftHeight finds the left height and rightHeight finds the right height. Height compares them and usess the
+    // bigger one as the height
     public void leftHeight(Node firstNode) {
         if (firstNode == null) {
             return;
@@ -210,6 +217,7 @@ public class TreeList {
 
 
     }
+    // Same as height, but it returns the height for breadthFirst.
     public int heightreturn() {
         leftHeight(this.root);
         rightHeight(this.root);
@@ -223,7 +231,7 @@ public class TreeList {
 
 
     }
-
+    // Does a depth first search
     public void depthFirst2(Node firstNode) {
         if (firstNode == null) {
             return;
@@ -236,7 +244,7 @@ public class TreeList {
     public void depthFirst() {
         depthFirst2(this.root);
     }
-
+    // does a breadth first search
     public void breadthFirst() {
         int h = heightreturn();
         System.out.print(this.root.value + " ");

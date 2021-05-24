@@ -1,0 +1,11 @@
+list.add() adds the value in parentheses to the binary search tree.
+list.search() searches the tree for the value in parentheses.
+list.delete() deletes the value in parentheses from the tree.
+list.Smallest() finds the smallest value in the tree.
+list.Largest() finds the largest value in the tree.
+list.nthLargest() finds the nth largest value in the tree. n is the value in parentheses.
+list.inOrder lists in the values of the tree in order.
+list.preOrder lists in the values of the tree in pre order.
+list.postOrder lists in the values of the tree in post order.
+list.depthFirst does a depth first search.
+list.breadthFirst does a breadth first search.

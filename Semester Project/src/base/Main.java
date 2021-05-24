@@ -11,15 +11,8 @@ public class Main {
     list.add(7);
     list.add(9);
     list.add(12);
-    //list.add(1);
-    //list.Smallest();
-    //list.Largest();
-    //list.nthLargest(3);
-    //list.height();
-    //list.search(2);
-    //list.delete(2);
-    //list.search(2);
     list.breadthFirst();
+
 
     }
 }
